@@ -1,4 +1,4 @@
-![git](https://user-images.githubusercontent.com/49953040/79988040-b505a780-849d-11ea-9470-d52863c055ef.JPG)
+
 
 # MostStarredGet
 
