@@ -1,7 +1,31 @@
-<!--The content below is only a placeholder and can be replaced.--> 
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-arrow-circle-left fa-lg" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-arrow-circle-right fa-lg" aria-hidden="true"></i></a>
+        </li>
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        
+      </form>
+    </div>
+  </div>
+</nav>
+
 <div *ngIf="profiles">
 
-  <h1  class="display-1" style="margin-left: 200px" >The most starred repositories on Github</h1>
+  <h4 class="" style="text-align: center;" >Trending Repositories</h4>
   
   <div class="container-fluid">
     <div class="container-fluid" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()" [scrollWindow]="false"
