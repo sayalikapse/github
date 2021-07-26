@@ -21,7 +21,7 @@ export class ProfilesService {
 
   getProfileInfo(page : number): Observable<any>{
     //For page 1
-    return this.http.get("https://api.github.com/search/repositories?q=created:>" + this.year + "-" + this.month + "-" + this.day + "&sort=stars&order=desc&page="+page)
+    return this.http.get("https://api.github.com/search/repositories?q=created:>" + this.year + "-" + this.month + "-" + this.day + "&sort=stars&order=desc&page=2"+page)
 }
 
 }

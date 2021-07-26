@@ -9,7 +9,7 @@ import { ProfilesService } from 'src/app/services/profiles.service';
 export class ProfilesComponent implements OnInit {
 
 	title = 'mostStarredGet';
-	page: number = 1;
+	page: number = 2; //display repositories on page 2
 	profiles = [];
 
 		ngOnInit() {
@@ -17,14 +17,13 @@ export class ProfilesComponent implements OnInit {
 	}
 	constructor (private profilesService: ProfilesService){}
 		getProfiles(page: number) {
-    // instead of moving the result to the lis of profiles we will call onsucces method
-    //the result as a parameter
+   
     this.profilesService.getProfileInfo(page).subscribe((res) => this.onSuccess(res) );
   }
 
  
   onSuccess(res) {
-    //we add each result to the list
+    
     if (res != undefined) {
       res.items.forEach(item => {
         this.profiles.push(item);
@@ -35,7 +34,7 @@ export class ProfilesComponent implements OnInit {
   onScroll()
   {
     console.log("Scrolled");
-    this.page = this.page + 1;
+    this.page = this.page + 2;
     this.getProfiles(this.page);
   }
 
