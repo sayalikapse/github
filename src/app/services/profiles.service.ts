@@ -14,7 +14,7 @@ export class ProfilesService {
   private page = 1;
   //
   constructor(private http:HttpClient) {
-  	console.log("service is now ready!");
+  	
   	console.log("Last month is "+ (this.year) + "-" + (this.month) + "-" + (this.day));
 
   }
