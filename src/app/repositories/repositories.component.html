@@ -23,7 +23,7 @@
   </div>
 </nav>
 
-<div *ngIf="profiles">
+<div *ngIf="repositories">
 
   <h3 class="" style="text-align: center;" >Trending Repositories</h3>
   
@@ -31,7 +31,7 @@
   <div class="container-fluid">
     <div class="container-fluid" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()" [scrollWindow]="false"
     style="height: 80vh;  overflow-y: scroll;">
-    <div style="margin-bottom: 20px;" class="row" *ngFor="let profile of profiles">
+    <div style="margin-bottom: 20px;" class="row" *ngFor="let profile of repositories">
       <div class="col-md-2 img">
         <img src="{{profile.owner.avatar_url}}" width="200" height="200" alt="" class="img-rounded">
       </div>

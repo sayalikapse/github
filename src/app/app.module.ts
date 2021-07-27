@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ProfilesService } from './services/profiles.service';
+import { RepositoriesService } from './services/repositories.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfilesComponent } from './profiles/profiles.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
   AppComponent,
-  ProfilesComponent
+  RepositoriesComponent
   ],
   imports: [
   BrowserModule,
@@ -18,7 +18,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   HttpClientModule,
   InfiniteScrollModule
   ],
-  providers: [ProfilesService],
-  bootstrap: [AppComponent,ProfilesComponent]
+  providers: [RepositoriesService],
+  bootstrap: [AppComponent,RepositoriesComponent]
 })
 export class AppModule { }
